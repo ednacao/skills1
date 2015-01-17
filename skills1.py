@@ -13,12 +13,13 @@ def all_odd(number_list):
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
-    even_numbers = []
-    for num in number_list:
-        if num % 2 == 0:
-            even_numbers.append(num)
-    return even_numbers
+    # even_numbers = []
+    # for num in number_list:
+    #     if num % 2 == 0:
+    #         even_numbers.append(num)
+    # return even_numbers
 
+    return [num for num in number_list if num % 2 == 0]
 # Write a function that takes a list of strings and a  returns new list with all strings of length 4 or greater.
 def long_words(word_list):
     long_words_4 = []
@@ -41,7 +42,7 @@ def smallest(number_list):
 def largest(number_list):
     max_num = number_list[0]
 
-    for num in number_list:
+    for num in number_list[1:]:
         if num > max_num:
             max_num = num
     return max_num
